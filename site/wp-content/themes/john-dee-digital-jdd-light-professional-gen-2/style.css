@@ -53,9 +53,9 @@ body { -webkit-font-smoothing: antialiased; }
 /* ── Mobile header: button left, title center, hamburger right ── */
 @media (max-width: 781px) {
   .site-header { flex-wrap: nowrap; }
-  .site-header > .wp-block-button { order: 1; flex-shrink: 0; }
+  .site-header > .wp-block-navigation { order: 1; flex-shrink: 0; }
   .site-header > .wp-block-group { order: 2; flex: 1; justify-content: center !important; }
-  .site-header > .wp-block-navigation { order: 3; flex-shrink: 0; }
+  .site-header > .wp-block-button { order: 3; flex-shrink: 0; }
   .site-header .wp-block-site-title { text-align: center !important; }
   .site-header .wp-block-site-logo { display: none; }
 }
@@ -88,3 +88,9 @@ body { -webkit-font-smoothing: antialiased; }
 
 /* Accent rule */
 hr.wp-block-separator { border: none; height: 2px; }
+
+/* ── Mission heading: single line or one word per line ── */
+.jdd-mission-word { white-space: nowrap; }
+@media (max-width: 640px) {
+  .jdd-mission-word { display: block; }
+}
