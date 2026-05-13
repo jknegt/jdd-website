@@ -1,0 +1,90 @@
+/*
+Theme Name: John Dee Digital
+Author: Generic Website Generator
+Version: 1.0
+Requires at least: 6.5
+Requires PHP: 7.4
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: john-dee-digital-jdd-light-professional-gen-2
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Lato:wght@400;600;700&display=swap');
+
+/* ── Base ─────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+body { -webkit-font-smoothing: antialiased; }
+
+/* ── Site header ──────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  transition: box-shadow 0.2s ease;
+}
+.site-header.is-scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.12); }
+
+/* ── Navigation ───────────────────────────────────── */
+.wp-block-navigation a { text-decoration: none; transition: color 0.2s ease; }
+
+/* ── Buttons ──────────────────────────────────────── */
+.wp-element-button {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+.wp-element-button:hover { transform: translateY(-2px); }
+.wp-element-button:active { transform: translateY(0); }
+
+/* ── Images ───────────────────────────────────────── */
+.wp-block-image img { display: block; max-width: 100%; height: auto; }
+
+/* ── Cover blocks ─────────────────────────────────── */
+.wp-block-cover { position: relative; }
+.wp-block-cover__image-background { object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+
+/* ── Columns responsive ───────────────────────────── */
+@media (max-width: 781px) {
+  .wp-block-columns { flex-direction: column; }
+  .wp-block-column { flex-basis: 100% !important; }
+}
+
+/* ── Mobile header: button left, title center, hamburger right ── */
+@media (max-width: 781px) {
+  .site-header { flex-wrap: nowrap; }
+  .site-header > .wp-block-button { order: 1; flex-shrink: 0; }
+  .site-header > .wp-block-group { order: 2; flex: 1; justify-content: center !important; }
+  .site-header > .wp-block-navigation { order: 3; flex-shrink: 0; }
+  .site-header .wp-block-site-title { text-align: center !important; }
+  .site-header .wp-block-site-logo { display: none; }
+}
+
+
+/* ── Bold Campaign First — custom styles ─────────── */
+.site-header--bold {
+  background: #3d5a73;
+}
+.site-header--bold .wp-block-navigation a {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.site-header--bold .wp-block-navigation a:hover { color: #2a9d8f; }
+.site-header--bold .wp-element-button:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+}
+
+/* Section transitions */
+.wp-block-group { transition: none; }
+
+/* Bold text treatments */
+.wp-block-heading { letter-spacing: -0.02em; }
+
+/* Footer links */
+.site-footer--bold a:hover { color: #2a9d8f !important; }
+
+/* Accent rule */
+hr.wp-block-separator { border: none; height: 2px; }
