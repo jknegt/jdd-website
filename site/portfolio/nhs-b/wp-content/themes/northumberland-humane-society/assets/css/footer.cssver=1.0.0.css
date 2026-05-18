@@ -1,0 +1,186 @@
+/* === NHS DIRECT — FOOTER CSS ===
+   4-column nav grid, footer links, social icons, bottom bar.
+   Depends on global.css custom properties.
+*/
+
+/* ============================================================
+   FOOTER INNER — max-width container
+   ============================================================ */
+
+.site-footer {
+  background: var(--color-campaign);
+  color: var(--color-text-on-navy);
+}
+
+.footer-inner {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--space-16) var(--space-6) var(--space-8);
+}
+
+/* ============================================================
+   FOOTER GRID — 4 columns
+   ============================================================ */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-10);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* ============================================================
+   FOOTER COLUMN — heading + link list
+   ============================================================ */
+
+.footer-col h3 {
+  font-family: var(--font-stat);
+  font-size: 0.7rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-campaign-accent);
+  margin-bottom: var(--space-4);
+  margin-top: 0;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: var(--space-2);
+}
+
+.footer-col a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  transition: color 0.15s;
+  display: inline-block;
+  min-height: 32px;
+  align-content: center;
+}
+
+.footer-col a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   FOOTER INFO — address + social
+   ============================================================ */
+
+.footer-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 0;
+}
+
+.footer-info p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: var(--space-1);
+}
+
+.footer-info a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   SOCIAL ICONS
+   ============================================================ */
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.footer-social a:hover {
+  border-color: white;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+.footer-social a:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   FOOTER BOTTOM BAR — legal + links
+   ============================================================ */
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.25);
+  margin-left: calc(-1 * var(--space-6));
+  margin-right: calc(-1 * var(--space-6));
+  margin-bottom: calc(-1 * var(--space-8));
+  padding: var(--space-4) var(--space-6);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+
+.footer-bottom a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}

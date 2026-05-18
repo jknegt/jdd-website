@@ -1,0 +1,624 @@
+/* === NHS DIRECT — PAGES CSS ===
+   Hero sections, stat strip, animal grid, donation CTA, adopt/donate page sections.
+   Depends on global.css custom properties.
+*/
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+
+.page-hero {
+  background: linear-gradient(135deg, var(--color-campaign) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  padding: clamp(4rem, 10vw, 8rem) var(--space-6);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(45, 90, 39, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-hero__inner {
+  position: relative;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-hero__badge {
+  display: inline-block;
+  background: var(--color-campaign-accent);
+  color: var(--color-text);
+  font-family: var(--font-stat);
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.page-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: var(--weight-bold);
+  color: white;
+  line-height: var(--leading-tight);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+.page-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: var(--leading-normal);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-6);
+}
+
+.page-hero__ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Hero-specific button overrides (on dark backgrounds) */
+.page-hero .btn-primary {
+  background: white;
+  color: var(--color-primary-dark);
+  border-color: white;
+}
+
+.page-hero .btn-primary:hover {
+  background: var(--color-surface-green);
+  border-color: var(--color-surface-green);
+  color: var(--color-primary-dark);
+}
+
+.page-hero .btn-secondary {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.page-hero .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-color: white;
+}
+
+/* ============================================================
+   STAT STRIP
+   ============================================================ */
+
+.stat-strip {
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-8) var(--space-6);
+}
+
+.stat-strip__inner {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+}
+
+.stat-item {
+  text-align: center;
+  min-width: 120px;
+}
+
+.stat-item__number {
+  font-family: var(--font-stat);
+  font-size: 2.5rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+  line-height: 1;
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.stat-item__label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+}
+
+/* ============================================================
+   CONTENT SECTIONS
+   ============================================================ */
+
+.section {
+  padding: var(--space-16) var(--space-6);
+}
+
+.section--green {
+  background: var(--color-primary);
+  color: white;
+}
+
+.section--warm {
+  background: var(--color-surface-warm);
+}
+
+.section--navy {
+  background: var(--color-campaign);
+  color: white;
+}
+
+.section-inner {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section__eyebrow {
+  font-family: var(--font-stat);
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.section--green .section__eyebrow,
+.section--navy .section__eyebrow {
+  color: var(--color-campaign-accent);
+}
+
+.section__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+}
+
+.section--green .section__heading,
+.section--navy .section__heading {
+  color: white;
+}
+
+.section__subheading {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 600px;
+}
+
+.section--green .section__subheading,
+.section--navy .section__subheading {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section__cta-row {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+/* ============================================================
+   ANIMAL PREVIEW GRID
+   ============================================================ */
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .animal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .animal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.animal-card {
+  border-radius: var(--radius-base);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.animal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+}
+
+.animal-card--dog {
+  background: linear-gradient(135deg, #4a8840 0%, #1e3f1a 100%);
+}
+
+.animal-card--cat {
+  background: linear-gradient(135deg, #e8a84a 0%, #9a5f12 100%);
+}
+
+.animal-card--small {
+  background: linear-gradient(135deg, #5b7fa6 0%, #1a2e4a 100%);
+}
+
+.animal-card__icon {
+  font-size: 3rem;
+  text-align: center;
+  padding: var(--space-6) var(--space-6) 0;
+  line-height: 1;
+}
+
+.animal-card__body {
+  padding: var(--space-4) var(--space-4) var(--space-5);
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.animal-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: var(--weight-semibold);
+  margin-top: 0;
+  margin-bottom: var(--space-1);
+  color: white;
+}
+
+.animal-card__meta {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+  margin-bottom: var(--space-3);
+  flex: 1;
+}
+
+.animal-card__link {
+  display: inline-block;
+  color: white;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  font-weight: var(--weight-semibold);
+}
+
+.animal-card__link:hover {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+}
+
+/* Photo card variant */
+.animal-card--photo {
+  background: white;
+}
+
+.animal-card__photo {
+  height: 200px;
+  overflow: hidden;
+}
+
+.animal-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.animal-card__body--dark .animal-card__name {
+  color: var(--color-text);
+}
+
+.animal-card__body--dark .animal-card__meta {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+.animal-card__body--dark .animal-card__link {
+  color: var(--color-primary);
+}
+
+.animal-card__body--dark .animal-card__link:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Team photo for About page */
+.team-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin: 0 auto var(--space-4);
+}
+
+/* ============================================================
+   DONATION CTA SECTION
+   ============================================================ */
+
+.donation-cta {
+  background: var(--color-primary);
+  padding: var(--space-20) var(--space-6);
+  text-align: center;
+  color: white;
+}
+
+.donation-cta__inner {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donation-cta__eyebrow {
+  font-family: var(--font-stat);
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-campaign-accent);
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.donation-cta__headline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  color: white;
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-snug);
+}
+
+.donation-cta__body {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: var(--leading-normal);
+  margin-bottom: var(--space-8);
+}
+
+/* ============================================================
+   ADOPT PAGE — PROCESS STEPS
+   ============================================================ */
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 600px;
+}
+
+.process-step {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.process-step__number {
+  font-family: var(--font-stat);
+  font-size: 2.5rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-primary-light);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 3rem;
+  text-align: center;
+}
+
+.process-step__content {}
+
+.process-step__title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+}
+
+.process-step__body {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ============================================================
+   PLACEHOLDER INTEGRATION BOX
+   ============================================================ */
+
+.placeholder-integration {
+  background: var(--color-surface-warm);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-base);
+  padding: var(--space-12) var(--space-8);
+  text-align: center;
+  color: var(--color-text-muted);
+  margin: var(--space-8) 0;
+}
+
+.placeholder-integration__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+  opacity: 0.4;
+}
+
+.placeholder-integration__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+}
+
+.placeholder-integration__body {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ============================================================
+   DONATE PAGE — GIVING TIERS
+   ============================================================ */
+
+.giving-tiers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+}
+
+.giving-tier {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-base);
+  padding: var(--space-6);
+  flex: 1;
+  min-width: 180px;
+  transition: border-color 0.2s;
+}
+
+.giving-tier:hover {
+  border-color: var(--color-primary);
+}
+
+.giving-tier__amount {
+  font-family: var(--font-stat);
+  font-size: 2rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.giving-tier__name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+}
+
+.giving-tier__desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ============================================================
+   MONTHLY GIVING — COMPASSION CLUB
+   ============================================================ */
+
+.compassion-club {
+  background: linear-gradient(135deg, var(--color-campaign) 0%, #0f1e30 100%);
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-10) var(--space-8);
+  margin: var(--space-8) 0;
+  text-align: center;
+}
+
+.compassion-club__title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+}
+
+.compassion-club__badge {
+  display: inline-block;
+  background: var(--color-campaign-accent);
+  color: var(--color-text);
+  font-family: var(--font-stat);
+  font-size: 0.7rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.compassion-club__body {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-6);
+}
+
+/* ============================================================
+   CONTACT / CTA STRIP
+   ============================================================ */
+
+.contact-strip {
+  background: var(--color-surface-green);
+  border-radius: var(--radius-base);
+  padding: var(--space-8);
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+.contact-strip__heading {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+}
+
+.contact-strip__details {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-4);
+}
+
+.contact-strip a {
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   TWO-COLUMN SPLIT (adopt page hero area)
+   ============================================================ */
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
+}

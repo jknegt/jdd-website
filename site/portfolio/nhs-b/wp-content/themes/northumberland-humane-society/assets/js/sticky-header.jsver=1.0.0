@@ -1,0 +1,27 @@
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+
+  var sentinel = document.createElement('div');
+  sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:80px;pointer-events:none;';
+  document.body.insertBefore(sentinel, document.body.firstChild);
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) {
+        header.classList.add('site-header--compact');
+      } else {
+        header.classList.remove('site-header--compact');
+      }
+    }, { threshold: 0 });
+    observer.observe(sentinel);
+  } else {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 80) {
+        header.classList.add('site-header--compact');
+      } else {
+        header.classList.remove('site-header--compact');
+      }
+    }, { passive: true });
+  }
+})();

@@ -1,0 +1,147 @@
+/* === NHS DIRECT — UTILITIES CSS ===
+   Accessibility utilities, focus improvements, print styles.
+*/
+
+/* ============================================================
+   FOCUS IMPROVEMENTS — ensure visible focus on all interactive elements
+   ============================================================ */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* On dark backgrounds — use white focus ring */
+.site-header a:focus-visible,
+.site-header button:focus-visible,
+.page-hero a:focus-visible,
+.donation-cta a:focus-visible,
+.section--green a:focus-visible,
+.section--navy a:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================================
+   REDUCED MOTION — respect user preference
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   HIGH CONTRAST — improve legibility
+   ============================================================ */
+
+@media (prefers-contrast: more) {
+  .animal-card__link,
+  .footer-col a,
+  .footer-info a {
+    text-decoration: underline !important;
+    font-weight: var(--weight-semibold);
+  }
+}
+
+/* ============================================================
+   SITE MAIN — ensure proper spacing from sticky header
+   ============================================================ */
+
+.site-main {
+  min-height: 50vh;
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+
+@media print {
+  .site-header,
+  .mobile-nav-overlay,
+  .hamburger-btn,
+  .header-ctas {
+    display: none !important;
+  }
+
+  .site-footer {
+    background: white !important;
+    color: black !important;
+  }
+
+  .page-hero {
+    background: white !important;
+    color: black !important;
+    padding: 2rem 0;
+  }
+
+  .page-hero__title {
+    color: black !important;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #444;
+  }
+}
+
+/* ============================================================
+   SCROLLBAR — subtle custom scrollbar (WebKit)
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+/* ============================================================
+   SELECTION — branded selection color
+   ============================================================ */
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* ============================================================
+   SMOOTH SCROLL
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

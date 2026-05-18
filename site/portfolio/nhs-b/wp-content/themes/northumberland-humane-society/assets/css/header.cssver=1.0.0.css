@@ -1,0 +1,357 @@
+/* === NHS DIRECT — HEADER CSS ===
+   Sticky header, nav, CTA buttons, hamburger, mobile overlay.
+   Depends on global.css custom properties.
+*/
+
+/* ============================================================
+   STICKY FIX — prevent WordPress overflow-x:hidden from
+   breaking position:sticky on .site-header
+   ============================================================ */
+
+.wp-site-blocks {
+  overflow-x: clip;
+}
+
+/* ============================================================
+   SITE HEADER — sticky base
+   ============================================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background: var(--color-primary);
+  color: var(--color-text-on-green);
+  transition: padding 0.2s ease;
+  overflow: visible;
+}
+
+.site-header--compact .header-inner {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+/* ============================================================
+   HEADER INNER — flex layout
+   ============================================================ */
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--space-4) var(--space-6) var(--space-4) 0;
+}
+
+/* ============================================================
+   SITE LOGO
+   ============================================================ */
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--color-text-on-green);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: 1.1rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.site-logo:hover {
+  color: var(--color-text-on-green);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.nhs-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  transform: scale(4);
+  transform-origin: left center;
+}
+
+.site-header--compact .nhs-logo-img {
+  height: 28px;
+}
+
+.nhs-logo-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-family: var(--font-stat);
+  letter-spacing: 0.05em;
+}
+
+.site-logo-title {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-left: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   DESKTOP NAVIGATION
+   ============================================================ */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: 1;
+  justify-content: center;
+}
+
+.site-nav a {
+  color: var(--color-text-on-green);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: var(--weight-medium);
+  transition: background 0.15s, opacity 0.15s;
+  white-space: nowrap;
+}
+
+.site-nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-text-on-green);
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* ============================================================
+   HEADER CTA BUTTONS
+   ============================================================ */
+
+.header-ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.btn-header-adopt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+}
+
+.btn-header-adopt:hover {
+  background: white;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+.btn-header-donate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-accent-light);
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  border: 2px solid var(--color-accent-light);
+}
+
+.btn-header-donate:hover {
+  background: var(--color-accent-light);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* ============================================================
+   HAMBURGER BUTTON
+   ============================================================ */
+
+.hamburger-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.hamburger-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hamburger-btn:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Hamburger → × animation when open */
+.hamburger-btn.is-open .hamburger-icon span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.is-open .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-btn.is-open .hamburger-icon span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================================
+   MOBILE NAV OVERLAY
+   ============================================================ */
+
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background: var(--color-campaign);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-8);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  pointer-events: none;
+}
+
+.mobile-nav-overlay[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: var(--weight-semibold);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-base);
+  transition: background 0.15s;
+  min-height: 48px;
+  line-height: 1.4;
+}
+
+.mobile-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-nav a:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+.mobile-nav-ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.mobile-nav-ctas .btn-header-adopt,
+.mobile-nav-ctas .btn-header-donate {
+  min-height: 52px;
+  padding: var(--space-3) var(--space-8);
+  font-size: 1rem;
+  width: 240px;
+  max-width: 100%;
+  justify-content: center;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .site-nav,
+  .header-ctas {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .site-logo-title {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-overlay {
+    display: none !important;
+  }
+}

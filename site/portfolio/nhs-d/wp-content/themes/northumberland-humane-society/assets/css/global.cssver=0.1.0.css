@@ -1,0 +1,64 @@
+/* NHS Design System — CSS Custom Properties */
+/* All values are raw (hex/number/unit) — NO var() inside :root */
+:root {
+  /* Colors */
+  --color-primary: #2D5A27;
+  --color-primary-dark: #1e3f1a;
+  --color-navy: #1a2e4a;
+  --color-amber: #c47a1e;
+  --color-gold: #e8c84a;
+  --color-white: #ffffff;
+  --color-cream: #faf9f6;
+  --color-light-green: #f0f5ef;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #555555;
+  --color-border: #e2e8e0;
+
+  /* Typography — font families */
+  --font-heading: 'Lora', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Oswald', Impact, sans-serif;
+
+  /* Typography — size scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  /* Spacing — 8px base unit */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow-base: 0 2px 8px rgba(0,0,0,0.12);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.15);
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-base: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Z-index scale */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+
+  /* Layout */
+  --max-width-content: 1200px;
+  --max-width-wide: 1440px;
+}
