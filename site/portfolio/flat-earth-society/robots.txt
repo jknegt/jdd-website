@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /admin
+
+Sitemap: https://johndeedigital.ca/portfolio/flat-earth-society/sitemap.xml
