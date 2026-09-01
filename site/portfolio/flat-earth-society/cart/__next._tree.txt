@@ -1,3 +1,3 @@
 :HL["/portfolio/flat-earth-society/_next/static/chunks/1yvfq4zoh6sr0.css","style"]
 :HL["/portfolio/flat-earth-society/_next/static/media/de161955856a921d-s.p.0fxeqrss3ag9h.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"cart","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"FpUmZjEgfY4dpdZIA8OsY"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"cart","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"HRSz7Csf37kOTK5t3DqHa"}
