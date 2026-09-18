@@ -1,3 +1,6 @@
-:HL["/portfolio/flat-earth-society/_next/static/chunks/3as-iul-tk4ae.css","style"]
+:HL["/portfolio/flat-earth-society/_next/static/chunks/1znjx4tlma0vc.css","style"]
+:HL["/portfolio/flat-earth-society/_next/static/media/5f440d3eea613716-s.p.1xmps1tcyqv34.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/portfolio/flat-earth-society/_next/static/media/748b8b5301d2bdb2-s.p.1zvx97hkh1y6p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/portfolio/flat-earth-society/_next/static/media/87d3ffffac5dafea-s.p.3a10o7es2neby.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/portfolio/flat-earth-society/_next/static/media/de161955856a921d-s.p.0fxeqrss3ag9h.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"menu","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"uhBBkQf44f9gf0BzqIL-D"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"menu","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"7-GS2gg05k_kD8FYh6Fva"}
