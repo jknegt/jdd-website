@@ -3,4 +3,4 @@
 :HL["/portfolio/flat-earth-society/_next/static/media/748b8b5301d2bdb2-s.p.1zvx97hkh1y6p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/portfolio/flat-earth-society/_next/static/media/87d3ffffac5dafea-s.p.3a10o7es2neby.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/portfolio/flat-earth-society/_next/static/media/de161955856a921d-s.p.0fxeqrss3ag9h.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"gdvWxOPFXzO3OLmOjZsK-"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"7SrocutPW78-hY8NWWG-f"}
